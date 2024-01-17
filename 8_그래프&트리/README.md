@@ -1,4 +1,4 @@
-# 동적계획법
+# 그래프&트리
 
 [메인으로 돌아가기](https://github.com/ruruisryu/Python_algorithm)
 
