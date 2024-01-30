@@ -23,8 +23,7 @@ def seek(ground):
                         if l == 1:
                             connected = 0
                             continue
-                        else:
-                            downhill = True  
+                        downhill = True  
                     connected = 1                   # 이어진 칸 수 리셋 
             else:                                   # 이전 땅에서 이어진 경사로가 있으면
                 if diff:                            # 경사로를 놓을 땅의 높이가 같지 않으면 탈락
@@ -36,7 +35,6 @@ def seek(ground):
                     connected = 0         
         else: # break 없이 한 줄 순환이 끝났는데 경사로를 더 놓아야 한다면 탈락
             if not downhill: 
-                print(i)
                 cnt += 1
         
 # 입력
@@ -48,7 +46,6 @@ for i in range(n):
 # 연산
 cnt = 0
 seek(ground)
-print('----------')
 seek([list(row) for row in zip(*ground)])
 
 # 출력
