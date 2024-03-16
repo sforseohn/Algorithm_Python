@@ -23,17 +23,3 @@ for i in range(1, n):
 
 # 출력
 print(min_cost)
-
-'''dfs로 풀려던 흔적...
-def dfs(node, cnt, cost):
-    if cnt == n + 1 and node == 0: # 경로 완성
-        return cost
-    if visited[node]: # 이미 방문했다면
-        return 0
-    
-    for j in range(n):
-        if w[node][j]: # 연결되어 있다면 
-            visited[node] = 1
-            cost += w[node][j]
-            dfs(j, cnt + 1, cost)
-'''    
