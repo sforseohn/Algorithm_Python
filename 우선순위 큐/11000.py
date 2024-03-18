@@ -16,6 +16,3 @@ for s, t in lec:
         heapq.heappush(room, t)
         
 print(len(room))
-    
-
-
