@@ -9,21 +9,22 @@ n = int(input()) # 단어의 개수
 cnt = 0
 for i in range(n):
     word = input().strip()
-    visited = {}
-    
+    visited = dict()
     visited[word[0]] = True
+    
     if len(word) == 1:
         cnt += 1
+        continue
     
     for j in range(1, len(word)):
         w = word[j]
         
-        if w in visited:        # 이미 딕셔너리에 저장되어 있으면 = 이미 나타난 적 있으면
-            if w != word[j-1]:  # 앞 문자와 이어지는지 확인
+        if w in visited:  # 이미 딕셔너리에 저장되어 있으면 = 이미 나타난 적 있으면
+            if word[j-1] != w: # 앞 문자와 이어지는지 확인
                 break
         else:
-            visited[w] = True   # 방문 체크
-        
+            visited[w] = True
+            
         if j == len(word) - 1:
             cnt += 1
 
